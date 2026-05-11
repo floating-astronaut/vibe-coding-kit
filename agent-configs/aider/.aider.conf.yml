@@ -1,0 +1,6 @@
+read: [README.md, docs/ONBOARDING.md]
+auto-commits: false
+dirty-commits: false
+attribute-author: false
+attribute-committer: false
+lint-cmd: "npm test || python -m pytest || true"

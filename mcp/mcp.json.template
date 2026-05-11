@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "<absolute-project-path>"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<paste-key-here>"
+      }
+    },
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "<postgres-connection-string>"]
+    },
+    "stripe": {
+      "command": "npx",
+      "args": ["-y", "@stripe/mcp", "--tools=all"],
+      "env": {
+        "STRIPE_SECRET_KEY": "<paste-key-here>"
+      }
+    },
+    "shopify": {
+      "command": "npx",
+      "args": ["-y", "@shopify/dev-mcp"],
+      "env": {
+        "SHOPIFY_ACCESS_TOKEN": "<paste-key-here>",
+        "SHOPIFY_STORE_DOMAIN": "<store.myshopify.com>"
+      }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "<paste-key-here>"
+      }
+    }
+  }
+}

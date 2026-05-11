@@ -1,0 +1,1 @@
+{"scripts":{"dev":"node src/server.js","smoke":"node src/server.js --smoke"},"dependencies":{"express":"latest","pg":"latest","dotenv":"latest"},"devDependencies":{}}

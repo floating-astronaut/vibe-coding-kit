@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(npm test:*)",
+      "Bash(pnpm test:*)",
+      "Bash(python -m pytest:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(npm publish:*)",
+      "Bash(pnpm publish:*)",
+      "Bash(docker compose up:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /:*)",
+      "Bash(git reset --hard:*)"
+    ]
+  }
+}

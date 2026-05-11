@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.DS_Store
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.mcp.local.json
+credentials.json
+secrets.*
+.DIRECTORY_CHECKSUM
+drafts/
+scaffold/

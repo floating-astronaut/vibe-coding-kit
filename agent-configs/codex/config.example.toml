@@ -1,0 +1,9 @@
+# Example only. Do not store real secrets here.
+[projects."/absolute/path/to/your/project"]
+trust_level = "trusted"
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."google-drive@openai-curated"]
+enabled = false
