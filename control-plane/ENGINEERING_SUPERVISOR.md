@@ -2,6 +2,14 @@
 
 > Append-only evidence log for the v2 build. Newest first.
 
+## L4 — Tooling
+Closed: 2026-06-02 · Owner: Claude
+Read: docs/LANE-LIFECYCLE.md, docs/DOC-SYSTEM.md
+Changed: bin/vibe-scaffold (new), bin/vibe-lane (new), bin/vibe-writeback (new)
+Verified: bash -n clean on all three; scaffolded into /tmp throwaway repo (11 files placed); drove a full lane lifecycle (open → claim → state×2 → close) and vibe-writeback supervisor prepend — all observed working; closed-bullet formatting fixed + re-tested
+Docs updated: ACTIVE_LANE_BOARD.md (L4 → closed)
+Remains / next: L5 — Codex refreshes README/INSTALL-PROMPT to document the tools + "replace your dev team" positioning, and maps cursor/aider/nemoclaw onto the three roles
+
 ## L3 — Enforcing agent configs
 Closed: 2026-06-02 · Owner: Claude
 Read: docs/THE-METHOD.md, docs/AGENT-SYNC-PROTOCOL.md, docs/ROLES.md, existing v1 agent-configs
