@@ -16,7 +16,7 @@
 <p align="center"><sub>▶ <a href="https://youtu.be/7udCWIHOzCg"><b>Full walkthrough — HD, with audio</b></a></sub></p>
 
 <p align="center">
-  One operator + a coordinated <b>Claude · Codex · Kimi</b> team ships like a squad.<br/>
+  One operator + a coordinated <b><a href="https://github.com/anthropics/claude-code">Claude&nbsp;Code</a> · <a href="https://github.com/openai/codex">Codex</a> · <a href="https://github.com/MoonshotAI/Kimi-K2">Kimi</a></b> team ships like a squad.<br/>
   This is the operating system for that team: docs-first discipline, bounded lanes,
   and zero-drift handoffs across agents.
 </p>
@@ -151,11 +151,11 @@ vibe-writeback changelog       # regenerate CHANGELOG.md from git log
 
 | Agent | Default role | When to assign |
 |---|---|---|
-| **Claude Code** | Builder | Heavy multi-file authoring, refactors, migrations |
-| **Codex** | Verifier & finisher | Rendered-page verification, detail polish, bug-finding |
-| **Kimi** | Orchestrator | Cross-repo work, parallel verification, infra checks |
-| **Cursor** | Builder | IDE-based deep coding with AI assist |
-| **Aider** | Builder | Terminal-first precise edits with git discipline |
+| **[Claude Code](https://github.com/anthropics/claude-code)** | Builder | Heavy multi-file authoring, refactors, migrations |
+| **[Codex](https://github.com/openai/codex)** | Verifier & finisher | Rendered-page verification, detail polish, bug-finding |
+| **[Kimi](https://github.com/MoonshotAI/Kimi-K2)** | Orchestrator | Cross-repo work, parallel verification, infra checks |
+| **[Cursor](https://cursor.com)** | Builder | IDE-based deep coding with AI assist |
+| **[Aider](https://github.com/Aider-AI/aider)** | Builder | Terminal-first precise edits with git discipline |
 
 Keep the three *functions* covered — **builder / verifier / orchestrator** — and
 map your roster onto them. The method depends on the functions, not the tools.
