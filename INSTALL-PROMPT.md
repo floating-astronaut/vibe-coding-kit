@@ -1,32 +1,26 @@
 # Install Prompt
 
-Paste this into Claude Code, Codex, Kimi, Cursor, Aider, or NemoClaw from the folder that contains this kit.
+Paste this into Claude Code, Codex, Kimi, Cursor, or Aider, run from the folder
+that contains this kit.
 
 ```text
-You are installing the Vibe Coding Kit for me.
-
-Goal: configure my AI coding workspace so a coordinated multi-agent team can work the same repo with zero drift — docs first, lanes assigned, write back, no drift.
+You are installing the Vibe Coding Kit into my project so a coordinated
+multi-agent team can work the same repo with zero drift: docs first, lanes
+assigned, write back, no drift.
 
 Rules:
-- Do not expose, print, or commit secrets.
-- Ask before overwriting existing config files.
-- Back up any existing config before replacing it.
-- Use the templates in this folder as source material.
-- If a tool is not installed, tell me the exact install step and continue with the rest.
-- Prefer local ignored config files for real API keys.
+- Do not expose, print, or commit secrets. Keep real keys in local ignored files.
+- Ask before overwriting existing files; back up anything you replace.
 
 Steps:
-1. Detect my OS and current AI tool if possible.
-2. Read README.md, docs/THE-METHOD.md, docs/ROLES.md, and docs/ONBOARDING.md.
-3. Inspect agent-configs/ and choose the config matching my tool.
-   - Claude Code / Cursor / Aider → builder role (heavy authoring, multi-file)
-   - Codex / NemoClaw → verifier role (check claims, polish details, find bugs)
-   - Kimi → orchestrator role (cross-repo, parallel checks, infra)
-4. Copy or merge the matching config into my project.
-5. If this is a new project (not the kit itself), run: bin/vibe-scaffold .
-6. Copy mcp/mcp.json.template to a local MCP config location, replacing only placeholders I provide.
-7. Ask which starter template I want: astro-marketing-site, nextjs-stripe-saas, python-langgraph-agent, or express-postgres-api.
-8. Create a new project folder from that template.
-9. Run the template's smoke test if dependencies are available.
-10. End by telling me exactly what changed, what still needs keys, and the first useful command to run.
+1. Read README.md, docs/THE-METHOD.md, and docs/ROLES.md.
+2. From the target project directory, run:  bin/vibe-scaffold .
+   This drops the method docs, a fresh control plane (lane board, session
+   coordination, supervisor log), and the per-agent configs (CLAUDE.md /
+   AGENTS.md / KIMI.md) into the project.
+3. Confirm I have a builder, a verifier, and an orchestrator covered (see
+   docs/ROLES.md): e.g. Claude builds, Codex verifies, Kimi orchestrates.
+   Map whatever agents I run onto those three functions.
+4. Open my first lane:  bin/vibe-lane open SETUP-1 "<first task>"
+5. Tell me exactly what changed and the first command to run.
 ```

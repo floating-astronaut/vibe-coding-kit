@@ -101,7 +101,6 @@ vibe-writeback changelog       # regenerate CHANGELOG.md from git log
 | **Kimi** | Orchestrator | Cross-repo work, parallel verification, infra checks |
 | **Cursor** | Builder | IDE-based deep coding with AI assist |
 | **Aider** | Builder | Terminal-first precise edits with git discipline |
-| **NemoClaw** | Verifier | Lightweight second-pair-of-eyes checks |
 
 Keep the three *functions* covered — **builder / verifier / orchestrator** — and
 map your roster onto them. The method depends on the functions, not the tools.
@@ -112,10 +111,8 @@ map your roster onto them. The method depends on the functions, not the tools.
 - `docs/AGENT-SYNC-PROTOCOL.md` — the multi-agent contract every session agrees to.
 - `docs/ROLES.md` · `docs/LANE-LIFECYCLE.md` · `docs/DOC-SYSTEM.md` — the rest of the method.
 - `control-plane/` — lane board, session coordination, supervisor log (templates + this build's live set).
-- `agent-configs/` — enforcing configs for Claude Code, Codex, Kimi, Cursor, Aider, NemoClaw.
+- `agent-configs/` — enforcing configs for Claude Code, Codex, Kimi, Cursor, Aider.
 - `bin/` — `vibe-scaffold`, `vibe-lane`, `vibe-writeback`.
-- `mcp/mcp.json.template` — a safe MCP roster with placeholders, not secrets.
-- `templates/` — starter projects for common agency and SaaS builds.
 
 ## Proof — a real lane, start to close
 
@@ -151,7 +148,7 @@ in `control-plane/ENGINEERING_SUPERVISOR.md`. See [`AUTHORS.md`](./AUTHORS.md).
 
 - Never commit `.env` files.
 - Never paste live keys into Git, chat, or Slack/Discord unless you're rotating them.
-- Use the placeholders in `mcp/mcp.json.template`; let your local agent write real secrets only into local ignored files.
+- Let your local agent write real secrets only into local ignored files, never into tracked config.
 - Keep client data out of prompts unless the client approved that workflow.
 
 ## License
