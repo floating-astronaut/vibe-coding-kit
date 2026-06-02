@@ -48,10 +48,15 @@ collisions.
 
 ## See it in action
 
-> 🎥 **Watch a real session:** a coordinated agent team open, work, verify, and
-> close a lane — live, zero drift.
->
-> ▶ _[watch the recording](REPLACE_WITH_VIDEO_URL)_
+A coordinated agent team open, work, verify, and close lanes — live, zero drift:
+
+<p align="center">
+  <a href="https://youtu.be/7udCWIHOzCg">
+    <img src="https://img.youtube.com/vi/7udCWIHOzCg/maxresdefault.jpg" alt="Watch the Vibe Coding Kit demo" width="640">
+  </a>
+</p>
+
+<p align="center">▶ <a href="https://youtu.be/7udCWIHOzCg"><b>Watch the demo</b></a></p>
 
 ## Fast start
 
