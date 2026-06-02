@@ -5,10 +5,15 @@ agent can own, verify, and close. This is the full lifecycle, from cut to closed
 
 ## States
 
-```
-OPEN  →  CLAIMED  →  IN PROGRESS  →  IN VERIFICATION  →  CLOSED
-                                          │
-                                          └──(fails)──→ back to IN PROGRESS
+```mermaid
+stateDiagram-v2
+    [*] --> OPEN
+    OPEN --> CLAIMED: an agent claims it
+    CLAIMED --> IN_PROGRESS: read docs · build
+    IN_PROGRESS --> IN_VERIFICATION: run acceptance check
+    IN_VERIFICATION --> IN_PROGRESS: fails — no silent pass
+    IN_VERIFICATION --> CLOSED: passes + write-back
+    CLOSED --> [*]
 ```
 
 A lane lives on `control-plane/ACTIVE_LANE_BOARD.md` and moves through these

@@ -33,14 +33,69 @@ This kit is the answer to that problem — and it wasn't invented in the abstrac
 It's the exact method one operator used to ship real production software with a
 team made entirely of AI agents:
 
+```mermaid
+flowchart LR
+    A["📄 Docs first"] --> B["🛣️ Lanes assigned"] --> C["⌨️ Code"] --> D["✅ Write back"] --> A
+    classDef s fill:#0a0a0f,stroke:#7c3aed,color:#fff;
+    class A,B,C,D s;
 ```
-docs first  →  lanes assigned  →  code  →  write back  →  no drift
-```
+
+<p align="center"><sub>The cycle that produces zero drift — every loop leaves the docs truer than it found them.</sub></p>
 
 The docs are the source of truth. Work is cut into bounded **lanes**. Each lane
 has one owner, required reading, an acceptance check, and a write-back duty. A
 lightweight **control plane** (a live lane board + an append-only evidence log)
 keeps every agent — and your future self — aligned. No human babysitting context.
+
+## How it works
+
+The **control plane** is the single source of truth. Every agent reads it before
+touching code and writes back to it before closing a lane. The operator sets
+direction; the agents work by comparative advantage; nobody collides.
+
+```mermaid
+flowchart TB
+    OP(["👤 Operator — direction & decisions"])
+    subgraph CP["📐 Control plane · source of truth"]
+        direction LR
+        DOCS["📚 docs/<br/>the contracts"]
+        BOARD["📋 lane board<br/>the live queue"]
+        SUP["🧾 supervisor log<br/>the evidence"]
+    end
+    CLAUDE["🛠️ Claude<br/>builder"]
+    CODEX["🔍 Codex<br/>verifier"]
+    KIMI["🎛️ Kimi<br/>orchestrator"]
+    REPO[("🗂️ Your repo")]
+
+    OP --> CP
+    CLAUDE <--> CP
+    CODEX <--> CP
+    KIMI <--> CP
+    CLAUDE --> REPO
+    CODEX --> REPO
+    KIMI --> REPO
+    CP -. governs .-> REPO
+
+    classDef plane fill:#0a0a0f,stroke:#7c3aed,color:#fff;
+    classDef agent fill:#0a0a0f,stroke:#0ea5e9,color:#fff;
+    classDef op fill:#0a0a0f,stroke:#eab308,color:#fff;
+    class DOCS,BOARD,SUP plane;
+    class CLAUDE,CODEX,KIMI agent;
+    class OP op;
+```
+
+### A lane, start to close
+
+```mermaid
+stateDiagram-v2
+    [*] --> OPEN
+    OPEN --> CLAIMED: an agent claims it
+    CLAIMED --> IN_PROGRESS: read docs · build
+    IN_PROGRESS --> IN_VERIFICATION: run acceptance check
+    IN_VERIFICATION --> IN_PROGRESS: fails — no silent pass
+    IN_VERIFICATION --> CLOSED: passes + write-back
+    CLOSED --> [*]
+```
 
 ## Proven in production
 
