@@ -2,6 +2,14 @@
 
 > Append-only evidence log for the v2 build. Newest first.
 
+## L3 — Enforcing agent configs
+Closed: 2026-06-02 · Owner: Claude
+Read: docs/THE-METHOD.md, docs/AGENT-SYNC-PROTOCOL.md, docs/ROLES.md, existing v1 agent-configs
+Changed: agent-configs/claude-code/CLAUDE.md (rewritten), agent-configs/codex/AGENTS.md (rewritten), agent-configs/kimi/KIMI.md (new)
+Verified: zero "glitch"/generic-v1 leakage; each config references the method docs (6/4/7 refs) and enforces startup-read → claim-lane → docs-first → verify → write-back → no-drift; roles map Claude=builder, Codex=verifier, Kimi=orchestrator
+Docs updated: ACTIVE_LANE_BOARD.md (L3 → closed)
+Remains / next: L4 tooling. cursor/aider/nemoclaw configs left as v1 carryover for L5 (Codex) to map onto the three functions.
+
 ## L2 — Control plane
 Closed: 2026-06-02 · Owner: Claude
 Read: docs/V2-DESIGN.md, docs/LANE-LIFECYCLE.md, docs/DOC-SYSTEM.md
