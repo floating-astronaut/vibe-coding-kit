@@ -3,6 +3,19 @@
 <p align="center"><b>Replace your dev team — you don't need one anymore.</b></p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square&labelColor=0a0a0f" alt="MIT">
+  <img src="https://img.shields.io/badge/built_by-AI_agents-7c3aed?style=flat-square&labelColor=0a0a0f" alt="Built by AI agents">
+  <img src="https://img.shields.io/badge/agents-Claude·Codex·Kimi-0ea5e9?style=flat-square&labelColor=0a0a0f" alt="Claude · Codex · Kimi">
+  <img src="https://img.shields.io/github/stars/floating-astronaut/vibe-coding-kit?style=flat-square&labelColor=0a0a0f&color=eab308" alt="Stars">
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/7udCWIHOzCg"><img src="docs/assets/demo.gif" width="760" alt="A coordinated agent team working a lane — live, zero drift"></a>
+</p>
+
+<p align="center"><sub>▶ <a href="https://youtu.be/7udCWIHOzCg"><b>Full walkthrough — HD, with audio</b></a></sub></p>
+
+<p align="center">
   One operator + a coordinated <b>Claude · Codex · Kimi</b> team ships like a squad.<br/>
   This is the operating system for that team: docs-first discipline, bounded lanes,
   and zero-drift handoffs across agents.
@@ -45,18 +58,6 @@ And the strongest proof: **this repo was built by its own method.** The
 who owned it, and the evidence it was verified. Claude built the method and
 tooling; Kimi ran the refresh and the proof lane. Two agents, one repo, zero
 collisions.
-
-## See it in action
-
-A coordinated agent team open, work, verify, and close lanes — live, zero drift:
-
-<p align="center">
-  <a href="https://youtu.be/7udCWIHOzCg">
-    <img src="https://img.youtube.com/vi/7udCWIHOzCg/maxresdefault.jpg" alt="Watch the Vibe Coding Kit demo" width="640">
-  </a>
-</p>
-
-<p align="center">▶ <a href="https://youtu.be/7udCWIHOzCg"><b>Watch the demo</b></a></p>
 
 ## Fast start
 
