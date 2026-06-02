@@ -1,6 +1,6 @@
 # Astro Marketing Site
 
-Starter template placeholder for the Glitch Vibe Kit.
+Starter template placeholder for the Vibe Coding Kit.
 
 ## First Prompt
 

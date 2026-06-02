@@ -2,6 +2,22 @@
 
 > Append-only evidence log for the v2 build. Newest first.
 
+## L6 — Proof run
+Closed: 2026-06-02 · Owner: Kimi
+Read: docs/V2-DESIGN.md, docs/LANE-LIFECYCLE.md, docs/AGENT-SYNC-PROTOCOL.md, control-plane/ACTIVE_LANE_BOARD.md
+Changed: README.md (Proof section added)
+Verified: vibe-scaffold dropped 11 files into /tmp/vibe-proof; lane PROOF-1 moved through open→claim→state(IN PROGRESS)→state(IN VERIFICATION)→close cleanly; vibe-writeback supervisor prepended evidence entry to ENGINEERING_SUPERVISOR.md; board and supervisor consistent
+Docs updated: README.md (Proof section), ACTIVE_LANE_BOARD.md (L6 → closed)
+Remains / next: v2 build complete — ship
+
+## L5 — Refresh v1 carryover
+Closed: 2026-06-02 · Owner: Kimi
+Read: docs/V2-DESIGN.md, docs/ROLES.md, existing README.md, INSTALL-PROMPT.md, agent-configs/
+Changed: README.md (rewritten for v2), INSTALL-PROMPT.md (rewritten for v2), LICENSE, install/install.sh, install/install.ps1, install/install-via-claude.md, templates/astro-marketing-site/src/pages/index.astro, templates/astro-marketing-site/README.md, templates/express-postgres-api/README.md, templates/python-langgraph-agent/README.md, templates/python-langgraph-agent/agent.py, templates/nextjs-stripe-saas/README.md, agent-configs/cursor/.cursor/rules/glitch-vibe-kit.mdc (renamed to vibe-coding-kit.mdc), agent-configs/aider/.aider.conf.yml, agent-configs/nemoclaw/overrides/README.md, skills/glitch-agents/ (removed)
+Verified: grep -ri glitch returns only historical context in V2-DESIGN.md and closed control-plane entries (intentional, not stale branding); cursor→builder, aider→builder, nemoclaw→verifier roles mapped and documented in configs; README documents all three tools (vibe-scaffold, vibe-lane, vibe-writeback)
+Docs updated: README.md, INSTALL-PROMPT.md, agent-configs/, ACTIVE_LANE_BOARD.md (L5 → closed)
+Remains / next: L6 proof run
+
 ## L4 — Tooling
 Closed: 2026-06-02 · Owner: Claude
 Read: docs/LANE-LIFECYCLE.md, docs/DOC-SYSTEM.md

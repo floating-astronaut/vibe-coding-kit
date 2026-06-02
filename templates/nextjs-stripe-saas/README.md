@@ -1,6 +1,6 @@
 # Next.js Stripe SaaS
 
-Starter template placeholder for the Glitch Vibe Kit.
+Starter template placeholder for the Vibe Coding Kit.
 
 ## First Prompt
 

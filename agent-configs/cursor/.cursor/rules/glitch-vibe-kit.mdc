@@ -1,6 +1,0 @@
----
-description: Glitch Vibe Kit baseline rules
-alwaysApply: true
----
-
-Read before editing. Keep changes small. Do not print secrets. Run the closest smoke test after changing code. Ask before destructive commands, deploys, or payment actions.

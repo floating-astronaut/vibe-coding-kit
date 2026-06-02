@@ -1,0 +1,9 @@
+---
+description: Vibe Coding Kit baseline rules
+alwaysApply: true
+---
+
+Read before editing. Keep changes small. Do not print secrets. Run the closest smoke test after changing code. Ask before destructive commands, deploys, or payment actions.
+
+Role mapping: Cursor → Builder (heavy multi-file authoring, refactors, migrations).
+Follow docs/THE-METHOD.md, docs/AGENT-SYNC-PROTOCOL.md, and docs/ROLES.md.

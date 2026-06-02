@@ -1,3 +1,5 @@
+# Vibe Coding Kit — Aider config
+# Role mapping: Aider → Builder (terminal-first precise edits, git discipline)
 read: [README.md, docs/ONBOARDING.md]
 auto-commits: false
 dirty-commits: false
